@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp">
+
+    <RelativeLayout
+        android:id="@+id/infosUtilisateursLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!--Nom de l'utilisateur-->
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="@dimen/width_TextViewComponents"
+            android:layout_height="@dimen/height_Components"
+            android:text="Nom :"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:gravity="center_vertical"
+            android:paddingEnd="5dp"
+            />
+
+        <EditText
+            android:id="@+id/nameEditText"
+            android:layout_width="@dimen/width_EditTextComponents"
+            android:layout_height="@dimen/height_Components"
+            android:hint="Nom"
+            android:gravity="center_horizontal"
+            android:inputType="textPersonName"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:layout_toEndOf="@id/nameTextView"
+            />
+
+        <!--Prénom de l'utilisateur-->
+        <TextView
+            android:id="@+id/prenomTextView"
+            android:layout_width="@dimen/width_TextViewComponents"
+            android:layout_height="@dimen/height_Components"
+            android:text="Prénom :"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:gravity="center_vertical"
+            android:layout_below="@id/nameTextView"
+            android:paddingEnd="5dp"
+            />
+
+        <EditText
+            android:id="@+id/prenomEditText"
+            android:layout_width="@dimen/width_EditTextComponents"
+            android:layout_height="@dimen/height_Components"
+            android:hint="Prénom"
+            android:gravity="center_horizontal"
+            android:inputType="textPersonName"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:layout_toEndOf="@id/prenomTextView"
+            android:layout_below="@id/nameTextView"
+            />
+
+
+        <!--Téléphone de l'utilisateur-->
+        <TextView
+            android:id="@+id/telTextView"
+            android:layout_width="@dimen/width_TextViewComponents"
+            android:layout_height="@dimen/height_Components"
+            android:text="Téléphone :"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:gravity="center_vertical"
+            android:layout_below="@id/prenomTextView"
+            android:paddingEnd="5dp"
+            />
+
+        <EditText
+            android:id="@+id/telEditText"
+            android:layout_width="@dimen/width_EditTextComponents"
+            android:layout_height="@dimen/height_Components"
+            android:hint="Téléphone"
+            android:gravity="center_horizontal"
+            android:inputType="numberDecimal"
+            android:maxLength="10"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:layout_toEndOf="@id/telTextView"
+            android:layout_below="@id/prenomTextView"
+            />
+
+        <!--Courriel de l'utilisateur-->
+        <TextView
+            android:id="@+id/courrielTextView"
+            android:layout_width="@dimen/width_TextViewComponents"
+            android:layout_height="@dimen/height_Components"
+            android:text="Courriel :"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:gravity="center_vertical"
+            android:layout_below="@id/telTextView"
+            android:paddingEnd="5dp"
+            />
+
+        <EditText
+            android:id="@+id/courrielEditText"
+            android:layout_width="@dimen/width_EditTextComponents"
+            android:layout_height="@dimen/height_Components"
+            android:hint="Courriel@domain.com"
+            android:gravity="center_horizontal"
+            android:inputType="textEmailAddress"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:layout_toEndOf="@id/courrielTextView"
+            android:layout_below="@id/telTextView"/>
+
+        <!--Mot de passe de l'utilisateur-->
+        <TextView
+            android:id="@+id/mdpTextView"
+            android:layout_width="@dimen/width_TextViewComponents"
+            android:layout_height="@dimen/height_Components"
+            android:text="Mot de passe :"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:gravity="center_vertical"
+            android:layout_below="@id/courrielTextView"
+            android:paddingEnd="5dp"
+            />
+
+        <EditText
+            android:id="@+id/mdpEditText"
+            android:layout_width="@dimen/width_EditTextComponents"
+            android:layout_height="@dimen/height_Components"
+            android:hint="Mot de passe"
+            android:gravity="center_horizontal"
+            android:inputType="textPassword"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:layout_toEndOf="@id/mdpTextView"
+            android:layout_below="@id/courrielTextView"
+            />
+
+    </RelativeLayout>
+
+    <!--Bouton ajout d'un moyen de paiement-->
+    <Button
+        android:id="@+id/ajoutMoyenPaiementButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:text="+ Ajout d'un moyen de paiement"
+        android:background="@drawable/btn_background"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/infosUtilisateursLayout"
+        />
+
+    <!--Bouton ajout d'une adresse de livraison favorite-->
+    <Button
+        android:id="@+id/ajoutAdresseFavoriteButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="+ Ajout d'une adresse favorite de livraison"
+        android:background="@drawable/btn_background"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/ajoutMoyenPaiementButton"
+        />
+
+    <!--Bouton ajout d'une adresse de livraison favorite-->
+    <Button
+        android:id="@+id/terminerInscriptionButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Terminer l'inscription"
+        android:background="@drawable/btn_background"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        />
+
+
+</RelativeLayout>

@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.usherbrooke.deliverresto.MainActivity"
+    tools:showIn="@layout/activity_main">
+    <!--android:background="@drawable/accueil_background"-->
+
+    <TextView
+        android:id="@+id/titleAccueil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:text="DeliverResto"
+        android:textColor="@android:color/white"
+        android:textSize="60sp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.CardView xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/cardViewAccueil"
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="60dp"
+        card_view:cardBackgroundColor="@android:color/white"
+        android:layout_below="@id/titleAccueil"
+        card_view:cardCornerRadius="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            >
+
+            <TextView
+                android:id="@+id/titleCardView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Déjà Client ?"
+                android:textAlignment="center"
+                android:textSize="30sp"
+                app:layout_constraintTop_toTopOf="parent"/>
+
+            <TextView
+                android:id="@+id/courrielTextView"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="Courriel :"
+                android:gravity="center_vertical"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:layout_below="@id/titleCardView"/>
+
+            <EditText
+                android:id="@+id/courrielEditText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_toRightOf="@id/courrielTextView"
+                android:layout_below="@+id/titleCardView"
+                android:hint="courriel@domaine.com"
+                android:inputType="textEmailAddress" />
+
+            <TextView
+                android:id="@+id/mdpTextView"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:text="Mot de passe :"
+                android:gravity="center_vertical"
+                android:textColor="@android:color/black"
+                android:textSize="15sp"
+                android:layout_below="@id/courrielTextView"/>
+
+            <EditText
+                android:id="@+id/mdpEditText"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="mot de passe"
+                android:inputType="textPassword"
+                android:layout_toRightOf="@id/mdpTextView"
+                android:layout_below="@id/courrielTextView"/>
+
+            <Button
+                android:id="@+id/connexionButton"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Connexion"
+                android:background="@drawable/btn_background"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/mdpTextView" />
+
+            <Button
+                android:id="@+id/mdpOublieButton"
+                android:layout_width="wrap_content"
+                android:layout_height="60dp"
+                android:text="Mot de passe oublié ?"
+                android:textAllCaps="false"
+                android:layout_marginTop="3dp"
+                android:background="@android:color/white"
+                style="?android:attr/borderlessButtonStyle"
+                android:textColor="@android:color/darker_gray"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/connexionButton" />
+
+
+
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+    <Button
+        android:id="@+id/inscriptionButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="S'inscrire"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/cardViewAccueil"
+        android:background="@drawable/btn_background"
+        android:layout_marginTop="25dp"
+        android:layout_marginRight="10dp"
+        />
+
+    <Button
+        android:id="@+id/commanderButton"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:text="Commander"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/cardViewAccueil"
+        android:layout_toRightOf="@id/inscriptionButton"
+        android:background="@drawable/btn_background"
+        android:layout_marginTop="25dp"
+        />
+
+
+</RelativeLayout>

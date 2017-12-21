@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alwaysDrawnWithCache="false"
+    android:clipToPadding="false"
+    android:fillViewport="true"
+    android:orientation="vertical">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <!--Informations Profile-->
+        <RelativeLayout
+            android:id="@+id/infosUtilisateursLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!--Nom de l'utilisateur-->
+            <TextView
+                android:id="@+id/nameTextView"
+                android:layout_width="@dimen/width_TextViewComponents"
+                android:layout_height="@dimen/height_Components"
+                android:gravity="center_vertical"
+                android:paddingEnd="5dp"
+                android:text="Nom :"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/nameEditText"
+                android:layout_width="@dimen/width_EditTextComponents"
+                android:layout_height="@dimen/height_Components"
+                android:layout_toEndOf="@id/nameTextView"
+                android:enabled="false"
+                android:gravity="center_horizontal"
+                android:hint="Nom"
+                android:inputType="textPersonName"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <!--Prénom de l'utilisateur-->
+            <TextView
+                android:id="@+id/prenomTextView"
+                android:layout_width="@dimen/width_TextViewComponents"
+                android:layout_height="@dimen/height_Components"
+                android:layout_below="@id/nameTextView"
+                android:gravity="center_vertical"
+                android:paddingEnd="5dp"
+                android:text="Prénom :"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/prenomEditText"
+                android:layout_width="@dimen/width_EditTextComponents"
+                android:layout_height="@dimen/height_Components"
+                android:layout_below="@id/nameTextView"
+                android:layout_toEndOf="@id/prenomTextView"
+                android:enabled="false"
+                android:gravity="center_horizontal"
+                android:hint="Prénom"
+                android:inputType="textPersonName"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+
+            <!--Téléphone de l'utilisateur-->
+            <TextView
+                android:id="@+id/telTextView"
+                android:layout_width="@dimen/width_TextViewComponents"
+                android:layout_height="@dimen/height_Components"
+                android:layout_below="@id/prenomTextView"
+                android:gravity="center_vertical"
+                android:paddingEnd="5dp"
+                android:text="Téléphone :"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/telEditText"
+                android:layout_width="@dimen/width_EditTextComponents"
+                android:layout_height="@dimen/height_Components"
+                android:layout_below="@id/prenomTextView"
+                android:layout_toEndOf="@id/telTextView"
+                android:enabled="false"
+                android:gravity="center_horizontal"
+                android:hint="Téléphone"
+                android:inputType="numberDecimal"
+                android:maxLength="10"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <!--Courriel de l'utilisateur-->
+            <TextView
+                android:id="@+id/courrielTextView"
+                android:layout_width="@dimen/width_TextViewComponents"
+                android:layout_height="@dimen/height_Components"
+                android:layout_below="@id/telTextView"
+                android:gravity="center_vertical"
+                android:paddingEnd="5dp"
+                android:text="Courriel :"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/courrielEditText"
+                android:layout_width="@dimen/width_EditTextComponents"
+                android:layout_height="@dimen/height_Components"
+                android:layout_below="@id/telTextView"
+                android:layout_toEndOf="@id/courrielTextView"
+                android:enabled="false"
+                android:gravity="center_horizontal"
+                android:hint="Courriel@domain.com"
+                android:inputType="textEmailAddress"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <!--Mot de passe de l'utilisateur-->
+            <TextView
+                android:id="@+id/mdpTextView"
+                android:layout_width="@dimen/width_TextViewComponents"
+                android:layout_height="@dimen/height_Components"
+                android:layout_below="@id/courrielTextView"
+                android:gravity="center_vertical"
+                android:paddingEnd="5dp"
+                android:text="Mot de passe :"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/mdpEditText"
+                android:layout_width="@dimen/width_EditTextComponents"
+                android:layout_height="@dimen/height_Components"
+                android:layout_below="@id/courrielTextView"
+                android:layout_toEndOf="@id/mdpTextView"
+                android:enabled="false"
+                android:gravity="center_horizontal"
+                android:hint="Mot de passe"
+                android:inputType="textPassword"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+        </RelativeLayout>
+
+        <!--Textview Adresse Favorite-->
+        <TextView
+            android:id="@+id/adresseFavoriteTextview"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="Adresse Favorite"
+            android:textColor="@android:color/white" />
+        <!--android:layout_below="@id/infosUtilisateursLayout"-->
+
+        <!--Information Adresse Favorite-->
+        <RelativeLayout
+            android:id="@+id/infosAdresseLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <!--android:layout_below="@id/adresseFavoriteTextview"-->
+
+            <!--Adresse de l'utilisateur-->
+            <TextView
+                android:id="@+id/adresseTextView"
+                android:layout_width="@dimen/width_TextViewComponents"
+                android:layout_height="@dimen/height_Components"
+                android:gravity="center_vertical"
+                android:paddingEnd="5dp"
+                android:text="Adresse :"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/adresseEditText"
+                android:layout_width="@dimen/width_EditTextComponents"
+                android:layout_height="@dimen/height_Components"
+                android:layout_toEndOf="@id/adresseTextView"
+                android:enabled="false"
+                android:gravity="center_horizontal"
+                android:hint="Adresse"
+                android:inputType="textPersonName"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <!--Code postal de l'utilisateur-->
+            <TextView
+                android:id="@+id/cpTextView"
+                android:layout_width="@dimen/width_TextViewComponents"
+                android:layout_height="@dimen/height_Components"
+                android:layout_below="@id/adresseTextView"
+                android:gravity="center_vertical"
+                android:paddingEnd="5dp"
+                android:text="Code Postal :"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/cpEditText"
+                android:layout_width="100dp"
+                android:layout_height="@dimen/height_Components"
+                android:layout_below="@id/adresseTextView"
+                android:layout_toEndOf="@id/cpTextView"
+                android:enabled="false"
+                android:gravity="center_horizontal"
+                android:hint="Code Postal"
+                android:inputType="textShortMessage"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+
+            <!--Ville de l'utilisateur-->
+            <TextView
+                android:id="@+id/villeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/height_Components"
+                android:layout_below="@id/adresseTextView"
+                android:layout_toEndOf="@id/cpEditText"
+                android:gravity="center_vertical"
+                android:paddingEnd="5dp"
+                android:paddingStart="15dp"
+                android:text="Ville :"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/villeEditText"
+                android:layout_width="100dp"
+                android:layout_height="@dimen/height_Components"
+                android:layout_below="@id/adresseTextView"
+                android:layout_toEndOf="@id/villeTextView"
+                android:enabled="false"
+                android:gravity="center_horizontal"
+                android:hint="Ville"
+                android:inputType="textPersonName"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <!--Province de l'utilisateur-->
+            <TextView
+                android:id="@+id/provinceTextView"
+                android:layout_width="@dimen/width_TextViewComponents"
+                android:layout_height="@dimen/height_Components"
+                android:layout_below="@id/cpTextView"
+                android:gravity="center_vertical"
+                android:paddingEnd="5dp"
+                android:text="Province :"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/provinceEditText"
+                android:layout_width="@dimen/width_EditTextComponents"
+                android:layout_height="@dimen/height_Components"
+                android:layout_below="@id/cpTextView"
+                android:layout_toEndOf="@id/provinceTextView"
+                android:enabled="false"
+                android:gravity="center_horizontal"
+                android:hint="Province"
+                android:inputType="textPersonName"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <!--Indications de l'utilisateur-->
+            <TextView
+                android:id="@+id/indicationTextView"
+                android:layout_width="@dimen/width_TextViewComponents"
+                android:layout_height="@dimen/height_Components"
+                android:layout_below="@id/provinceTextView"
+                android:gravity="center_vertical"
+                android:paddingEnd="5dp"
+                android:text="Indication :"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+
+            <EditText
+                android:id="@+id/indicationEditText"
+                android:layout_width="@dimen/width_EditTextComponents"
+                android:layout_height="@dimen/height_Components"
+                android:layout_below="@id/provinceTextView"
+                android:layout_toEndOf="@id/indicationTextView"
+                android:enabled="false"
+                android:gravity="center_horizontal"
+                android:hint="Indication"
+                android:inputType="textMultiLine"
+                android:textColor="@android:color/black"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <!--Textview Moyen de paiement-->
+        <TextView
+            android:id="@+id/moyenPaiementTextview"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimary"
+            android:gravity="center"
+            android:text="Moyen de paiement"
+            android:textColor="@android:color/white" />
+        <!-- android:layout_below="@id/infosAdresseLayout"-->
+
+        <!--Information Moyen de paiement-->
+        <RelativeLayout
+            android:id="@+id/infosMoyenPaiement"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <!--android:layout_below="@id/moyenPaiementTextview"-->
+
+            <!--Choix mode de paiement-->
+            <RelativeLayout
+                android:id="@+id/choixPaiementLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+
+                <RadioGroup
+                    android:id="@+id/choixPaiementRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true">
+
+                    <!--Radio Button CB + Image-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/choixCBRadioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:checked="true"
+                            android:enabled="false"
+                            android:onClick="onRadioButtonClicked"
+                            android:paddingRight="10dp" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/image_cb" />
+                    </LinearLayout>
+
+                    <!--Radio Button PayPal + Image-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/choixPayPalRadioButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:enabled="false"
+                            android:onClick="onRadioButtonClicked"
+                            android:paddingRight="60dp" />
+
+                        <ImageView
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:src="@drawable/paypal" />
+                    </LinearLayout>
+
+                </RadioGroup>
+
+            </RelativeLayout>
+
+            <!--Textview Coordonées bancaires-->
+            <TextView
+                android:id="@+id/coordBancTextview"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:layout_below="@id/choixPaiementLayout"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorPrimary"
+                android:gravity="center"
+                android:text="Coordonnées bancaires"
+                android:textColor="@android:color/white" />
+
+
+            <!--Coordonnées Bancaires-->
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/coordBancTextview">
+
+                <!--N° carte-->
+                <TextView
+                    android:id="@+id/numCBTextView"
+                    android:layout_width="130dp"
+                    android:layout_height="@dimen/height_Components"
+                    android:gravity="center_vertical"
+                    android:paddingEnd="5dp"
+                    android:text="N° de carte :"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/numCBEditText"
+                    android:layout_width="@dimen/width_EditTextComponents"
+                    android:layout_height="@dimen/height_Components"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentTop="true"
+                    android:enabled="false"
+                    android:gravity="center_horizontal"
+                    android:hint="Numéro de carte"
+                    android:inputType="numberDecimal"
+                    android:maxLength="16"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+
+                <!--Titulaire de la CB-->
+                <TextView
+                    android:id="@+id/titulaireTextView"
+                    android:layout_width="130dp"
+                    android:layout_height="@dimen/height_Components"
+                    android:layout_below="@id/numCBTextView"
+                    android:gravity="center_vertical"
+                    android:paddingEnd="5dp"
+                    android:text="Titulaire :"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/titulaireEditText"
+                    android:layout_width="@dimen/width_EditTextComponents"
+                    android:layout_height="@dimen/height_Components"
+                    android:layout_below="@id/numCBTextView"
+                    android:layout_toEndOf="@id/titulaireTextView"
+                    android:enabled="false"
+                    android:gravity="center_horizontal"
+                    android:hint="Titulaire"
+                    android:inputType="textPersonName"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+
+                <!--Date d'expiration de la CB-->
+                <TextView
+                    android:id="@+id/dateExpirationTextView"
+                    android:layout_width="130dp"
+                    android:layout_height="@dimen/height_Components"
+                    android:layout_below="@id/titulaireTextView"
+                    android:gravity="center_vertical"
+                    android:paddingEnd="5dp"
+                    android:text="Date d'expiration :"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/moisExpirationEditText"
+                    android:layout_width="60dp"
+                    android:layout_height="@dimen/height_Components"
+                    android:layout_below="@id/titulaireTextView"
+                    android:layout_marginRight="15dp"
+                    android:layout_toEndOf="@id/dateExpirationTextView"
+                    android:enabled="false"
+                    android:gravity="center_horizontal"
+                    android:hint="MM"
+                    android:inputType="numberDecimal"
+                    android:maxLength="2"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/anneeExpirationEditText"
+                    android:layout_width="80dp"
+                    android:layout_height="@dimen/height_Components"
+                    android:layout_below="@id/titulaireTextView"
+                    android:layout_toEndOf="@id/moisExpirationEditText"
+                    android:enabled="false"
+                    android:gravity="center_horizontal"
+                    android:hint="AAAA"
+                    android:inputType="numberDecimal"
+                    android:maxLength="4"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+
+                <!--Cryptogramme de la CB-->
+                <TextView
+                    android:id="@+id/cryptogrammeTextView"
+                    android:layout_width="130dp"
+                    android:layout_height="@dimen/height_Components"
+                    android:layout_below="@id/dateExpirationTextView"
+                    android:gravity="center_vertical"
+                    android:paddingEnd="5dp"
+                    android:text="Cryptogramme :"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+
+                <EditText
+                    android:id="@+id/cryptogrammeEditText"
+                    android:layout_width="60dp"
+                    android:layout_height="@dimen/height_Components"
+                    android:layout_below="@id/dateExpirationTextView"
+                    android:layout_toEndOf="@id/cryptogrammeTextView"
+                    android:enabled="false"
+                    android:gravity="center_horizontal"
+                    android:hint="123"
+                    android:inputType="numberDecimal"
+                    android:maxLength="3"
+                    android:textColor="@android:color/black"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <!--Bouton ajout d'un moyen de paiement-->
+        <Button
+            android:id="@+id/ajoutMoyenPaiementButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_background"
+            android:text="+ Ajout d'un moyen de paiement"
+
+            />
+
+        <!--Bouton ajout d'une adresse Favorite-->
+        <Button
+            android:id="@+id/ajoutAdresseFavoriteButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/btn_background"
+            android:text="+ Ajout d'une adresse favorite" />
+
+    </LinearLayout>
+
+</ScrollView>

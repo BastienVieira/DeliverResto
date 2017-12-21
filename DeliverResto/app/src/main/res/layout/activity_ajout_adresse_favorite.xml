@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="15dp">
+
+    <RelativeLayout
+        android:id="@+id/infosAdresseLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!--Adresse de l'utilisateur-->
+        <TextView
+            android:id="@+id/adresseTextView"
+            android:layout_width="95dp"
+            android:layout_height="@dimen/height_Components"
+            android:text="Adresse :"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:gravity="center_vertical"
+            android:paddingEnd="5dp"
+            />
+
+        <EditText
+            android:id="@+id/adresseEditText"
+            android:layout_width="@dimen/width_EditTextComponents"
+            android:layout_height="@dimen/height_Components"
+            android:hint="Adresse"
+            android:gravity="center_horizontal"
+            android:inputType="textPersonName"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:layout_toEndOf="@id/adresseTextView"
+            />
+
+        <!--Code postal de l'utilisateur-->
+        <TextView
+            android:id="@+id/cpTextView"
+            android:layout_width="95dp"
+            android:layout_height="@dimen/height_Components"
+            android:text="Code Postal :"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:gravity="center_vertical"
+            android:paddingEnd="5dp"
+            android:layout_below="@id/adresseTextView"
+            />
+
+        <EditText
+            android:id="@+id/cpEditText"
+            android:layout_width="100dp"
+            android:layout_height="@dimen/height_Components"
+            android:hint="Code Postal"
+            android:gravity="center_horizontal"
+            android:inputType="textShortMessage"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:layout_toEndOf="@id/cpTextView"
+            android:layout_below="@id/adresseTextView"
+
+            />
+
+
+        <!--Ville de l'utilisateur-->
+        <TextView
+            android:id="@+id/villeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/height_Components"
+            android:text="Ville :"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:gravity="center_vertical"
+            android:paddingStart="15dp"
+            android:paddingEnd="5dp"
+            android:layout_below="@id/adresseTextView"
+            android:layout_toEndOf="@id/cpEditText"
+            />
+
+        <EditText
+            android:id="@+id/villeEditText"
+            android:layout_width="100dp"
+            android:layout_height="@dimen/height_Components"
+            android:hint="Ville"
+            android:gravity="center_horizontal"
+            android:inputType="textPersonName"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:layout_toEndOf="@id/villeTextView"
+            android:layout_below="@id/adresseTextView"
+            />
+
+        <!--Province de l'utilisateur-->
+        <TextView
+            android:id="@+id/provinceTextView"
+            android:layout_width="95dp"
+            android:layout_height="@dimen/height_Components"
+            android:text="Province :"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:gravity="center_vertical"
+            android:paddingEnd="5dp"
+            android:layout_below="@id/cpTextView"
+            />
+
+        <EditText
+            android:id="@+id/provinceEditText"
+            android:layout_width="@dimen/width_EditTextComponents"
+            android:layout_height="@dimen/height_Components"
+            android:hint="Province"
+            android:gravity="center_horizontal"
+            android:inputType="textPersonName"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:layout_toEndOf="@id/provinceTextView"
+            android:layout_below="@id/cpTextView"
+            />
+
+        <!--Indications de l'utilisateur-->
+        <TextView
+            android:id="@+id/indicationTextView"
+            android:layout_width="95dp"
+            android:layout_height="@dimen/height_Components"
+            android:text="Indication :"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:gravity="center_vertical"
+            android:paddingEnd="5dp"
+            android:layout_below="@id/provinceTextView"
+            />
+
+        <EditText
+            android:id="@+id/indicationEditText"
+            android:layout_width="@dimen/width_EditTextComponents"
+            android:layout_height="@dimen/height_Components"
+            android:hint="Indication"
+            android:gravity="center_horizontal"
+            android:inputType="textMultiLine"
+            android:textSize="15sp"
+            android:textColor="@android:color/black"
+            android:layout_toEndOf="@id/indicationTextView"
+            android:layout_below="@id/provinceTextView"
+            />
+    </RelativeLayout>
+
+    <!--Bouton Enregistrer adresse-->
+    <Button
+        android:id="@+id/enregistrerAdresseButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Enregistrer l'Adresse"
+        android:background="@drawable/btn_background"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        />
+</RelativeLayout>

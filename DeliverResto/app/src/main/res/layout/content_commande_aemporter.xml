@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.usherbrooke.deliverresto.CommandeAEmporterActivity"
+    tools:showIn="@layout/activity_commande_aemporter">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:padding="15dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp"
+        android:layout_height="500dp">
+
+        <!--Choix mode de paiement-->
+        <RelativeLayout
+            android:id="@+id/infosUtilisateurLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="beforeDescendants"
+            android:focusableInTouchMode="true"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:id="@+id/textInformationUtilisateur"
+                android:textSize="25dp"
+                android:textAlignment="center"
+                android:background="#CCCCCC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:textAppearanceListItem"
+                android:text="Informations utilisateur"/>
+
+            <!--Nom de l'utilisateur-->
+            <TextView
+                android:id="@+id/nomTextView"
+                android:layout_width="95dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/textInformationUtilisateur"
+                android:text="Nom :"
+                android:textSize="15sp"
+                android:layout_marginTop="10dp"
+                android:textColor="@android:color/black"
+                android:gravity="center_vertical"
+                android:paddingEnd="5dp"
+                />
+
+            <EditText
+                android:id="@+id/nomEditTextEmporter"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="10dp"
+                android:hint="Nom"
+                android:layout_below="@+id/textInformationUtilisateur"
+                android:gravity="center_horizontal"
+                android:inputType="textPersonName"
+                android:textSize="15sp"
+                android:focusedByDefault="false"
+                android:textColor="@android:color/black"
+                android:layout_toEndOf="@id/nomTextView"
+                />
+
+            <!--Prenom de l'utilisateur-->
+            <TextView
+                android:id="@+id/prenomTextView"
+                android:layout_width="95dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/nomTextView"
+                android:text="Prenom :"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:gravity="center_vertical"
+                android:paddingEnd="5dp"
+                />
+
+            <EditText
+                android:id="@+id/prenomEditTextEmporter"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/nomTextView"
+                android:hint="Prenom"
+                android:focusedByDefault="false"
+                android:gravity="center_horizontal"
+                android:inputType="textPersonName"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:layout_toEndOf="@id/prenomTextView"
+                />
+
+
+        </RelativeLayout>
+
+
+
+
+        <!--Coordonnées Bancaires-->
+        <RelativeLayout
+            android:id="@+id/infosMagasinLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="350dp"
+            android:layout_marginTop="20dp"
+            android:layout_below="@+id/infosUtilisateurLayout"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:id="@+id/textInformationMagasin"
+                android:textSize="25dp"
+                android:textAlignment="center"
+                android:background="#CCCCCC"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:textAppearanceListItem"
+                android:text="Choix du magasin"/>
+
+            <ListView
+                android:id="@+id/listViewMagasins"
+                android:layout_width="match_parent"
+                android:nestedScrollingEnabled="true"
+                android:layout_below="@+id/textInformationMagasin"
+                android:layout_height="200dp"/>
+
+            <LinearLayout
+                android:id="@+id/linearLayoutTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/listViewMagasins"
+                android:layout_alignParentStart="true">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/textVide"
+                        android:textAlignment="center"
+                        android:layout_margin="8dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=" "
+                        android:textAppearance="?android:textAppearanceListItem"/>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+    <!--Bouton Enregistrer adresse-->
+    <LinearLayout
+        android:id="@+id/linearLayoutButton"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:weightSum="2"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/annulerCommandeButton"
+                android:layout_width="150dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_annuler"
+                android:textColor="#FFFFFF"
+                android:text="Annuler" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/validerCommandeButton"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_valider"
+                android:textColor="#FFFFFF"
+                android:text="Valider" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

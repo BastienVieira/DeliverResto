@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.usherbrooke.deliverresto.PaiementActivity"
+    tools:showIn="@layout/activity_paiement"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/textRecapitulatif"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:background="#CCCCCC"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceListItem"
+        android:text="Recapitulatif Commande"/>
+
+
+    <ListView
+        android:id="@+id/listViewRecapitulatif"
+        android:layout_below="@id/textRecapitulatif"
+        android:layout_width="match_parent"
+        android:nestedScrollingEnabled="true"
+        android:clickable="false"
+        android:layout_height="220dp"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutTotal"
+        android:layout_width="wrap_content"
+        android:weightSum="4"
+        android:layout_height="50dp"
+        android:layout_below="@+id/listViewRecapitulatif"
+        android:layout_alignParentStart="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/textTotal"
+                android:layout_alignParentLeft="true"
+                android:layout_width="fill_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_centerInParent="true"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="Total"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+            <TextView
+                android:id="@+id/textSumTotal"
+                android:layout_width="wrap_content"
+                android:layout_centerInParent="true"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="30$"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textQuantity"
+        android:layout_below="@id/linearLayoutTotal"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:background="#CCCCCC"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceListItem"
+        android:text="Réception"/>
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutHeure"
+        android:layout_below="@id/textQuantity"
+        android:layout_width="match_parent"
+        android:weightSum="2"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1">
+
+            <RadioButton
+                android:id="@+id/radioPlusTot"
+                android:layout_centerHorizontal="true"
+                android:checked="true"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:text="Au plus Tôt"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/textA"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:textAlignment="center"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:textSize="15dp"
+                android:text="A :"/>
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginRight="5dp"
+                android:id="@+id/setClockButton"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/btn_background"
+                android:src="@drawable/ic_access_time_black_24dp"
+                android:layout_toEndOf="@+id/editHour"/>
+
+            <EditText
+                android:id="@+id/editHour"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:hint="Heure"
+                android:clickable="false"
+                android:focusable="false"
+                android:enabled="false"
+                android:layout_centerHorizontal="true"
+                android:inputType="textEmailAddress"
+                android:layout_toEndOf="@+id/textA" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutButton"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:weightSum="2"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/emporterButton"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_background"
+                android:text="A emporter" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/livrerButton"
+                android:layout_width="150dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_background"
+                android:text="A livrer" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
+

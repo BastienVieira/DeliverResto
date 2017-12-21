@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:id="@+id/layout_text"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:paddingLeft="10dp">
+
+        <TextView
+            android:id="@+id/titlePlatTextView"
+            android:layout_width="180dp"
+            android:layout_height="40dp"
+            android:text="Empty"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/black"
+            android:textSize="20sp"/>
+
+        <TextView
+            android:id="@+id/ingredientsTextView"
+            android:layout_width="180dp"
+            android:layout_height="60dp"
+            android:text="Empty"
+            android:gravity="center_vertical"
+            android:textColor="@android:color/black"
+            android:textSize="15sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutNumberButton"
+        android:layout_width="50dp"
+        android:layout_height="100dp"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/numberTextView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_alignParentRight="true"
+        android:text="0" />
+
+        <Button
+            android:id="@+id/numberButton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:gravity="center"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/btn_background"
+            style="?android:attr/borderlessButtonStyle"
+            android:text="+" />
+    </LinearLayout>
+
+
+</merge>

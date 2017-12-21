@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.usherbrooke.deliverresto">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".CarteActivity"
+            android:label="@string/title_activity_carte"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.usherbrooke.deliverresto.MainActivity" />
+        </activity>
+        <activity
+            android:name=".PanierActivity"
+            android:label="@string/title_activity_panier"
+            android:parentActivityName=".CarteActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.usherbrooke.deliverresto.CarteActivity" />
+        </activity>
+        <activity
+            android:name=".PaiementActivity"
+            android:label="@string/title_activity_paiement"
+            android:parentActivityName=".PanierActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.usherbrooke.deliverresto.PanierActivity" />
+        </activity>
+        <activity
+            android:name=".CommandeALivrerActivity"
+            android:label="@string/title_activity_commande_alivrer"
+            android:parentActivityName=".PaiementActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.usherbrooke.deliverresto.PaiementActivity" />
+        </activity>
+        <activity
+            android:name=".MoyenPaimentLivraisonActivity"
+            android:label="@string/title_activity_moyen_paiment_livraison"
+            android:parentActivityName=".CommandeALivrerActivity"
+            android:theme="@style/AppTheme">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.usherbrooke.deliverresto.CommandeALivrerActivity" />
+        </activity>
+        <activity
+            android:name=".InscriptionActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".AjoutAdresseFavoriteActivity"
+            android:parentActivityName=".InscriptionActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".InscriptionActivity" />
+        </activity>
+        <activity
+            android:name=".AjoutMoyenPaiementActivity"
+            android:parentActivityName=".InscriptionActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".InscriptionActivity" />
+        </activity>
+        <activity
+            android:name=".MonCompteActivity"
+            android:parentActivityName=".MainActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".CommandeAEmporterActivity"
+            android:label="@string/title_activity_commande_aemporter"
+            android:parentActivityName=".PanierActivity"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustPan">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.usherbrooke.deliverresto.PanierActivity" />
+        </activity>
+        <activity
+            android:name=".FinalActivity"
+            android:label="@string/title_activity_final"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>

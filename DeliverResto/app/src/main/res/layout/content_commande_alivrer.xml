@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.usherbrooke.deliverresto.CommandeALivrerActivity"
+    tools:showIn="@layout/activity_commande_alivrer">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/lineraLayoutAdresse"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:padding="15dp"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/textRecapitulatif"
+            android:textSize="25dp"
+            android:textAlignment="center"
+            android:background="#CCCCCC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:textAppearanceListItem"
+            android:text="Information du Client"/>
+
+        <RelativeLayout
+            android:id="@+id/infosAdresseLayout"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <!--Nom de l'utilisateur-->
+            <TextView
+                android:id="@+id/nomTextView"
+                android:layout_width="95dp"
+                android:layout_height="50dp"
+                android:text="Nom :"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:gravity="center_vertical"
+                android:paddingEnd="5dp"
+                />
+
+            <EditText
+                android:id="@+id/nomEditText"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:hint="Nom"
+                android:gravity="center_horizontal"
+                android:inputType="textPersonName"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:layout_toEndOf="@id/nomTextView"
+                />
+
+            <!--Prenom de l'utilisateur-->
+            <TextView
+                android:id="@+id/prenomTextView"
+                android:layout_width="95dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/nomTextView"
+                android:text="Prenom :"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:gravity="center_vertical"
+                android:paddingEnd="5dp"
+                />
+
+            <EditText
+                android:id="@+id/prenomEditText"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_below="@+id/nomTextView"
+                android:hint="Prenom"
+                android:gravity="center_horizontal"
+                android:inputType="textPersonName"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:layout_toEndOf="@id/prenomTextView"
+                />
+
+            <!--Adresse de l'utilisateur-->
+            <TextView
+                android:id="@+id/adresseTextView"
+                android:layout_below="@+id/prenomTextView"
+                android:layout_width="95dp"
+                android:layout_height="50dp"
+                android:text="Adresse :"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:gravity="center_vertical"
+                android:paddingEnd="5dp"
+                />
+
+            <EditText
+                android:id="@+id/adresseEditText"
+                android:layout_below="@+id/prenomTextView"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:hint="Adresse"
+                android:gravity="center_horizontal"
+                android:inputType="textPersonName"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:layout_toEndOf="@id/adresseTextView"
+                />
+
+            <ImageButton
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:id="@+id/setPositionButton"
+                android:background="@drawable/btn_background"
+                android:src="@drawable/ic_gps_fixed_black_24dp"
+                android:layout_below="@+id/prenomEditText"
+                android:layout_toEndOf="@+id/adresseEditText"/>
+
+            <!--Code postal de l'utilisateur-->
+            <TextView
+                android:id="@+id/cpTextView"
+                android:layout_width="95dp"
+                android:layout_height="50dp"
+                android:text="Code Postal :"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:gravity="center_vertical"
+                android:paddingEnd="5dp"
+                android:layout_below="@id/adresseTextView"
+                android:layout_marginTop="20dp"
+                />
+
+            <EditText
+                android:id="@+id/cpEditText"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:hint="Code Postal"
+                android:gravity="center_horizontal"
+                android:inputType="textShortMessage"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:layout_toEndOf="@id/cpTextView"
+                android:layout_below="@id/adresseTextView"
+                android:layout_marginTop="20dp"
+                />
+
+
+            <!--Ville de l'utilisateur-->
+            <TextView
+                android:id="@+id/villeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:text="Ville :"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:gravity="center_vertical"
+                android:paddingStart="15dp"
+                android:paddingEnd="5dp"
+                android:layout_below="@id/adresseTextView"
+                android:layout_toEndOf="@id/cpEditText"
+                android:layout_marginTop="20dp"
+                />
+
+            <EditText
+                android:id="@+id/villeEditText"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:hint="Ville"
+                android:gravity="center_horizontal"
+                android:inputType="textPersonName"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:layout_toEndOf="@id/villeTextView"
+                android:layout_below="@id/adresseTextView"
+                android:layout_marginTop="20dp"
+                />
+
+            <!--Province de l'utilisateur-->
+            <TextView
+                android:id="@+id/provinceTextView"
+                android:layout_width="95dp"
+                android:layout_height="50dp"
+                android:text="Province :"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:gravity="center_vertical"
+                android:paddingEnd="5dp"
+                android:layout_below="@id/cpTextView"
+                android:layout_marginTop="20dp"
+                />
+
+            <EditText
+                android:id="@+id/provinceEditText"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:hint="Province"
+                android:gravity="center_horizontal"
+                android:inputType="textPersonName"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:layout_toEndOf="@id/provinceTextView"
+                android:layout_below="@id/cpTextView"
+                android:layout_marginTop="20dp"
+                />
+
+            <!--Indications de l'utilisateur-->
+            <TextView
+                android:id="@+id/indicationTextView"
+                android:layout_width="95dp"
+                android:layout_height="50dp"
+                android:text="Indication :"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:gravity="center_vertical"
+                android:paddingEnd="5dp"
+                android:layout_below="@id/provinceTextView"
+                android:layout_marginTop="20dp"
+                />
+
+            <EditText
+                android:id="@+id/indicationEditText"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:hint="Indication"
+                android:gravity="center_horizontal"
+                android:inputType="textMultiLine"
+                android:textSize="15sp"
+                android:textColor="@android:color/black"
+                android:layout_toEndOf="@id/indicationTextView"
+                android:layout_below="@id/provinceTextView"
+                android:layout_marginTop="20dp"
+                />
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayoutButton"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:weightSum="2"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="8dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/annulerLivraisonButton"
+                android:layout_width="150dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_annuler"
+                android:textColor="#FFFFFF"
+                android:text="Annuler" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/validerLivraisonButton"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_valider"
+                android:textColor="#FFFFFF"
+                android:text="Valider" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

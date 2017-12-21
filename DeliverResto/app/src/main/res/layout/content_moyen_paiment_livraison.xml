@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:padding="15dp">
+
+<!--Choix mode de paiement-->
+<RelativeLayout
+    android:id="@+id/choixPaiementLayout"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true">
+</RelativeLayout>
+
+<!--Textview Coordonées bancaires-->
+    <TextView
+        android:id="@+id/textCarteDeCredit"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:background="#CCCCCC"
+        android:layout_margin="8dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceListItem"
+        android:text="Carte de crédit"/>
+
+
+<!--Coordonnées Bancaires-->
+<RelativeLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@+id/textCarteDeCredit"
+    android:layout_alignParentStart="true">
+
+    <!--N° carte-->
+    <TextView
+        android:id="@+id/numCBTextView"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="N° de carte :"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:paddingEnd="5dp"
+        />
+
+    <EditText
+        android:id="@+id/numCBEditText"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:hint="Numéro de carte"
+        android:gravity="center_horizontal"
+        android:inputType="numberDecimal"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"
+        android:layout_toEndOf="@id/numCBTextView"
+        />
+
+    <!--Titulaire de la CB-->
+    <TextView
+        android:id="@+id/titulaireTextView"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="Titulaire :"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:paddingEnd="5dp"
+        android:layout_below="@id/numCBTextView"
+        />
+
+    <EditText
+        android:id="@+id/titulaireEditText"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:hint="Titulaire"
+        android:gravity="center_horizontal"
+        android:inputType="textPersonName"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"
+        android:layout_toEndOf="@id/titulaireTextView"
+        android:layout_below="@id/numCBTextView"
+        />
+
+    <!--Date d'expiration de la CB-->
+    <TextView
+        android:id="@+id/dateExpirationTextView"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="Date d'expiration :"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:paddingEnd="5dp"
+        android:layout_below="@id/titulaireTextView"
+        />
+
+    <EditText
+        android:id="@+id/moisExpirationEditText"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:hint="MM"
+        android:maxLength="2"
+        android:gravity="center_horizontal"
+        android:inputType="numberDecimal"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"
+        android:layout_toEndOf="@id/dateExpirationTextView"
+        android:layout_below="@id/titulaireTextView"
+        android:layout_marginRight="15dp"
+        />
+
+    <EditText
+        android:id="@+id/anneeExpirationEditText"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:hint="AAAA"
+        android:maxLength="4"
+        android:gravity="center_horizontal"
+        android:inputType="numberDecimal"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"
+        android:layout_toEndOf="@id/moisExpirationEditText"
+        android:layout_below="@id/titulaireTextView"
+        />
+
+    <!--Cryptogramme de la CB-->
+    <TextView
+        android:id="@+id/cryptogrammeTextView"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:text="Cryptogramme :"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"
+        android:gravity="center_vertical"
+        android:paddingEnd="5dp"
+        android:layout_below="@id/dateExpirationTextView"
+        />
+
+    <EditText
+        android:id="@+id/cryptogrammeEditText"
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:hint="123"
+        android:maxLength="3"
+        android:gravity="center_horizontal"
+        android:inputType="numberDecimal"
+        android:textSize="15sp"
+        android:textColor="@android:color/black"
+        android:layout_below="@+id/moisExpirationEditText"
+        android:layout_toEndOf="@+id/dateExpirationTextView" />
+
+    <TextView
+        android:id="@+id/textPaypal"
+        android:layout_below="@+id/cryptogrammeEditText"
+        android:textSize="25dp"
+        android:textAlignment="center"
+        android:background="#CCCCCC"
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:textAppearanceListItem"
+        android:text="Paypal"/>
+
+    <Button
+        android:id="@+id/PayerPaypalButton"
+        android:layout_width="250dp"
+        android:layout_marginTop="20dp"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textPaypal"
+        android:background="@drawable/btn_background"
+        android:text="Payer par Paypal" />
+</RelativeLayout>
+
+<!--Bouton Enregistrer adresse-->
+    <LinearLayout
+        android:id="@+id/linearLayoutButton"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:weightSum="2"
+        android:layout_height="wrap_content">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/annulerPaimentButton"
+                android:layout_width="150dp"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_annuler"
+                android:textColor="#FFFFFF"
+                android:text="Annuler" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/validerPaimentButton"
+                android:layout_centerVertical="true"
+                android:layout_centerHorizontal="true"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/btn_valider"
+                android:textColor="#FFFFFF"
+                android:text="Valider" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>
