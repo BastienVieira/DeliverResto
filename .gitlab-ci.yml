@@ -10,36 +10,36 @@ before_script:
   - chmod +x ./gradlew
 
 stages:
-  #- build
-  #- quality_assurance
+  - build
+  - quality_assurance
   - test
 
 
 
-#build:
-  #stage: build
-  #only:
-  #  - test_unit
-  #script:
-  #  - ./gradlew assembleDebug
-  #artifacts:
-  #  paths:
-  #  - DeliverResto/app/build/outputs/
+build:
+  stage: build
+  only:
+   - test_unit
+  script:
+   - ./gradlew assembleDebug
+  artifacts:
+   paths:
+   - DeliverResto/app/build/outputs/
 
 
 
-#verifications:
-#  stage: quality_assurance
- # only:
-  #  - test_unit
-#  script:
-#    - ./gradlew assemble lint
-#    - ./gradlew findbugs
-#    - ./gradlew pmd
-#  artifacts:
- #   when: always
- #   paths:
- #     - DeliverResto/app/build/reports/
+verifications:
+ stage: quality_assurance
+ only:
+   - test_unit
+ script:
+   - ./gradlew assemble lint
+   - ./gradlew findbugs
+   - ./gradlew pmd
+ artifacts:
+   when: always
+   paths:
+     - DeliverResto/app/build/reports/
 
 
 
